@@ -2,31 +2,25 @@ import React from 'react';
 import {
 	StyleSheet,
 	View,
-	Image
 } from 'react-native';
+import Header from './Header.js';
+import Body from './Body.js';
+
 
 export default class App extends React.Component {
 	render() {
 		return (
-			<View style = {Styles.header}>
-				<Image
-					style = {Styles.headerImage}
-					source = {
-						require('./resources/imgs/cover.jpg')
-					}
-					resizeMethod = 'resize'
-				/>
+			<View style = {Styles.body}>
+				<Header />
+				<Body />
 			</View>
 		);
 	}
 }
 
 const Styles = StyleSheet.create({
-	header:{
-		height: 150,
-		width: 350
-	},
-	headerImage:{
-		flex: 1
+	body:{
+		flex: 1,
+		backgroundColor: '#4D4D4D'
 	}
 });
